@@ -1,0 +1,200 @@
+{"expected_route": "TRANSACTION_EXEC", "query": "Cancel order ORD-02216 now.", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What are the warranty terms on SKU-026?", "synthetic": true}
+{"expected_route": "DIRECT_ANSWER", "query": "hey there", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Approve refund RF-18139 for 1734 USD.", "synthetic": true}
+{"expected_route": "DIRECT_ANSWER", "query": "hello", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What are the warranty terms on SKU-020?", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What is the return window for SKU-028?", "synthetic": true}
+{"expected_route": "DIRECT_ANSWER", "query": "thank you", "synthetic": true}
+{"expected_route": "REJECT_OOS", "query": "send me horoscope for Leo", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Create a new shipment for order ORD-63840.", "synthetic": true}
+{"expected_route": "REJECT_OOS", "query": "give me a recipe for soup", "synthetic": true}
+{"expected_route": "REJECT_OOS", "query": "send me horoscope for Leo", "synthetic": true}
+{"expected_route": "DIRECT_ANSWER", "query": "hey there", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Submit the purchase order PO-55971 to the supplier.", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Cancel order ORD-44821 now.", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Submit the purchase order PO-67534 to the supplier.", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Cancel order ORD-07927 now.", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Cancel order ORD-24481 now.", "synthetic": true}
+{"expected_route": "REJECT_OOS", "query": "give me a recipe for soup", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "Tell me the storage temperature for SKU-027.", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What does the policy say about refund approvals?", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Update the quarantine status of LOT-52042 to released.", "synthetic": true}
+{"expected_route": "REJECT_OOS", "query": "tell me a joke", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "How long does ground shipping take?", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "How long does ground shipping take?", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Submit the purchase order PO-85084 to the supplier.", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "Tell me the storage temperature for SKU-030.", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What is the return window for SKU-030?", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What does the policy say about refund approvals?", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What are the warranty terms on SKU-005?", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "Tell me the storage temperature for SKU-016.", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "How long does ground shipping take?", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Submit the purchase order PO-46480 to the supplier.", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Update the quarantine status of LOT-48014 to released.", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Cancel order ORD-38441 now.", "synthetic": true}
+{"expected_route": "DIRECT_ANSWER", "query": "thank you", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Submit the purchase order PO-07933 to the supplier.", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Create a new shipment for order ORD-63030.", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "Tell me the storage temperature for SKU-004.", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Approve refund RF-82336 for 522 USD.", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What is the return window for SKU-014?", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What does the policy say about refund approvals?", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What are the warranty terms on SKU-018?", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Approve refund RF-84650 for 656 USD.", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What does the policy say about refund approvals?", "synthetic": true}
+{"expected_route": "DIRECT_ANSWER", "query": "hey there", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Approve refund RF-55294 for 1497 USD.", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What does the policy say about refund approvals?", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What does the policy say about refund approvals?", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Cancel order ORD-07197 now.", "synthetic": true}
+{"expected_route": "DIRECT_ANSWER", "query": "thank you", "synthetic": true}
+{"expected_route": "DIRECT_ANSWER", "query": "hello", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What is the return window for SKU-010?", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Approve refund RF-90723 for 996 USD.", "synthetic": true}
+{"expected_route": "DIRECT_ANSWER", "query": "hi", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What is the return window for SKU-017?", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Update the quarantine status of LOT-88216 to released.", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Update the quarantine status of LOT-89149 to released.", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Approve refund RF-21169 for 1756 USD.", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Cancel order ORD-34620 now.", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What does the policy say about refund approvals?", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "How long does ground shipping take?", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Cancel order ORD-25871 now.", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What does the policy say about refund approvals?", "synthetic": true}
+{"expected_route": "REJECT_OOS", "query": "send me horoscope for Leo", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What are the warranty terms on SKU-008?", "synthetic": true}
+{"expected_route": "REJECT_OOS", "query": "give me a recipe for soup", "synthetic": true}
+{"expected_route": "DIRECT_ANSWER", "query": "hello", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What does the policy say about refund approvals?", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What does the policy say about refund approvals?", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Cancel order ORD-11356 now.", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What is the return window for SKU-014?", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What are the warranty terms on SKU-023?", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Update the quarantine status of LOT-75860 to released.", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What are the warranty terms on SKU-025?", "synthetic": true}
+{"expected_route": "REJECT_OOS", "query": "tell me a joke", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Submit the purchase order PO-60689 to the supplier.", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What is the return window for SKU-007?", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Update the quarantine status of LOT-04405 to released.", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What are the warranty terms on SKU-014?", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Create a new shipment for order ORD-63037.", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What are the warranty terms on SKU-019?", "synthetic": true}
+{"expected_route": "REJECT_OOS", "query": "tell me a joke", "synthetic": true}
+{"expected_route": "DIRECT_ANSWER", "query": "thanks!", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Approve refund RF-47506 for 1999 USD.", "synthetic": true}
+{"expected_route": "REJECT_OOS", "query": "write me a poem about autumn", "synthetic": true}
+{"expected_route": "REJECT_OOS", "query": "write me a poem about autumn", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What are the warranty terms on SKU-027?", "synthetic": true}
+{"expected_route": "DIRECT_ANSWER", "query": "thank you", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What does the policy say about refund approvals?", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Submit the purchase order PO-73486 to the supplier.", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Create a new shipment for order ORD-92582.", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What does the policy say about refund approvals?", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What is the return window for SKU-004?", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What are the warranty terms on SKU-015?", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What are the warranty terms on SKU-011?", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "Tell me the storage temperature for SKU-005.", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Approve refund RF-56597 for 144 USD.", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Cancel order ORD-85626 now.", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What does the policy say about refund approvals?", "synthetic": true}
+{"expected_route": "REJECT_OOS", "query": "give me a recipe for soup", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "How long does ground shipping take?", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What is the return window for SKU-001?", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "How long does ground shipping take?", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Update the quarantine status of LOT-78428 to released.", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What does the policy say about refund approvals?", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What does the policy say about refund approvals?", "synthetic": true}
+{"expected_route": "REJECT_OOS", "query": "write me a poem about autumn", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Submit the purchase order PO-86723 to the supplier.", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Cancel order ORD-03322 now.", "synthetic": true}
+{"expected_route": "REJECT_OOS", "query": "give me a recipe for soup", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What does the policy say about refund approvals?", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What are the warranty terms on SKU-017?", "synthetic": true}
+{"expected_route": "DIRECT_ANSWER", "query": "hi", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What are the warranty terms on SKU-028?", "synthetic": true}
+{"expected_route": "REJECT_OOS", "query": "give me a recipe for soup", "synthetic": true}
+{"expected_route": "DIRECT_ANSWER", "query": "hello", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What does the policy say about refund approvals?", "synthetic": true}
+{"expected_route": "REJECT_OOS", "query": "tell me a joke", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Submit the purchase order PO-35938 to the supplier.", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Update the quarantine status of LOT-40811 to released.", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Update the quarantine status of LOT-68030 to released.", "synthetic": true}
+{"expected_route": "REJECT_OOS", "query": "tell me a joke", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What is the return window for SKU-029?", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "Tell me the storage temperature for SKU-028.", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What is the return window for SKU-029?", "synthetic": true}
+{"expected_route": "DIRECT_ANSWER", "query": "hello", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "Tell me the storage temperature for SKU-017.", "synthetic": true}
+{"expected_route": "REJECT_OOS", "query": "give me a recipe for soup", "synthetic": true}
+{"expected_route": "REJECT_OOS", "query": "write me a poem about autumn", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Cancel order ORD-72091 now.", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What are the warranty terms on SKU-030?", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What does the policy say about refund approvals?", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Approve refund RF-86966 for 1992 USD.", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What is the return window for SKU-028?", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What are the warranty terms on SKU-023?", "synthetic": true}
+{"expected_route": "DIRECT_ANSWER", "query": "hello", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What is the return window for SKU-009?", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What does the policy say about refund approvals?", "synthetic": true}
+{"expected_route": "DIRECT_ANSWER", "query": "thanks!", "synthetic": true}
+{"expected_route": "DIRECT_ANSWER", "query": "hello", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Approve refund RF-53819 for 975 USD.", "synthetic": true}
+{"expected_route": "REJECT_OOS", "query": "give me a recipe for soup", "synthetic": true}
+{"expected_route": "DIRECT_ANSWER", "query": "hey there", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Submit the purchase order PO-74673 to the supplier.", "synthetic": true}
+{"expected_route": "DIRECT_ANSWER", "query": "hi", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Submit the purchase order PO-71662 to the supplier.", "synthetic": true}
+{"expected_route": "REJECT_OOS", "query": "send me horoscope for Leo", "synthetic": true}
+{"expected_route": "REJECT_OOS", "query": "write me a poem about autumn", "synthetic": true}
+{"expected_route": "REJECT_OOS", "query": "write me a poem about autumn", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What are the warranty terms on SKU-008?", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Submit the purchase order PO-50184 to the supplier.", "synthetic": true}
+{"expected_route": "REJECT_OOS", "query": "send me horoscope for Leo", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What is the return window for SKU-022?", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "Tell me the storage temperature for SKU-023.", "synthetic": true}
+{"expected_route": "DIRECT_ANSWER", "query": "thank you", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Create a new shipment for order ORD-38818.", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "How long does ground shipping take?", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Cancel order ORD-18695 now.", "synthetic": true}
+{"expected_route": "DIRECT_ANSWER", "query": "thank you", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What are the warranty terms on SKU-018?", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Cancel order ORD-65048 now.", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "How long does ground shipping take?", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What are the warranty terms on SKU-020?", "synthetic": true}
+{"expected_route": "DIRECT_ANSWER", "query": "thanks!", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What is the return window for SKU-010?", "synthetic": true}
+{"expected_route": "DIRECT_ANSWER", "query": "thank you", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "How long does ground shipping take?", "synthetic": true}
+{"expected_route": "REJECT_OOS", "query": "write me a poem about autumn", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What is the return window for SKU-025?", "synthetic": true}
+{"expected_route": "DIRECT_ANSWER", "query": "thank you", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Update the quarantine status of LOT-16367 to released.", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What is the return window for SKU-025?", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "How long does ground shipping take?", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Approve refund RF-75073 for 1243 USD.", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Create a new shipment for order ORD-61812.", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Submit the purchase order PO-67685 to the supplier.", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What is the return window for SKU-020?", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "Tell me the storage temperature for SKU-024.", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "Tell me the storage temperature for SKU-014.", "synthetic": true}
+{"expected_route": "REJECT_OOS", "query": "send me horoscope for Leo", "synthetic": true}
+{"expected_route": "DIRECT_ANSWER", "query": "thanks!", "synthetic": true}
+{"expected_route": "DIRECT_ANSWER", "query": "thanks!", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Cancel order ORD-61460 now.", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What is the return window for SKU-027?", "synthetic": true}
+{"expected_route": "DIRECT_ANSWER", "query": "hey there", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What is the return window for SKU-022?", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Cancel order ORD-59166 now.", "synthetic": true}
+{"expected_route": "REJECT_OOS", "query": "tell me a joke", "synthetic": true}
+{"expected_route": "REJECT_OOS", "query": "give me a recipe for soup", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "Tell me the storage temperature for SKU-022.", "synthetic": true}
+{"expected_route": "REJECT_OOS", "query": "give me a recipe for soup", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Cancel order ORD-38282 now.", "synthetic": true}
+{"expected_route": "DIRECT_ANSWER", "query": "hey there", "synthetic": true}
+{"expected_route": "DIRECT_ANSWER", "query": "thanks!", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Approve refund RF-93426 for 397 USD.", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Approve refund RF-40697 for 617 USD.", "synthetic": true}
+{"expected_route": "HYBRID_RAG", "query": "What are the warranty terms on SKU-014?", "synthetic": true}
+{"expected_route": "TRANSACTION_EXEC", "query": "Approve refund RF-76368 for 228 USD.", "synthetic": true}
+{"expected_route": "REJECT_OOS", "query": "give me a recipe for soup", "synthetic": true}

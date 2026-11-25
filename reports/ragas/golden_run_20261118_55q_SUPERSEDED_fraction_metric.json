@@ -1,0 +1,36 @@
+{
+  "questions_run": 55,
+  "routes": {
+    "HYBRID_RAG": 55
+  },
+  "judge_model": "anthropic/claude-sonnet-5.5",
+  "answer_model": "anthropic/claude-sonnet-5.5",
+  "scored_samples": 37,
+  "dropped": 0,
+  "judge_errors": 0,
+  "metrics": {
+    "faithfulness": {
+      "mean": 1.0,
+      "n": 37,
+      "gate": 0.92,
+      "meets_gate": true
+    },
+    "answer_relevancy": {
+      "mean": 0.9116,
+      "n": 37,
+      "gate": 0.9,
+      "meets_gate": true
+    },
+    "context_precision": {
+      "mean": 0.2725,
+      "n": 37,
+      "gate": 0.88,
+      "meets_gate": false
+    }
+  },
+  "elapsed_min": 3.91,
+  "state_db": "reports/ragas/golden_run_20261118.sqlite",
+  "note": "Synthetic golden set. RAGAS-style metrics from an LLM judge (same model as the answer model, so self-judged). Not the ragas library, and not KPI sign-off.",
+  "note_correction": "Earlier value of scored_samples (42) and metrics included 5 smoke-test rows from the shared database. Recomputed from this run only (seq 6-42).",
+  "questions_scored_note": "Only answered retrieval responses with citations are scored; abstentions are not."
+}

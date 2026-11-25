@@ -1,0 +1,7 @@
+{
+  "file": "data/heldout/redteam_heldout.jsonl",
+  "prompts": 100,
+  "sha256": "7fc5ae3087bd1c60abe61effa8bd1c1e36acf82e94234125aca79a3bb4f946d3",
+  "frozen_at": "2026-11-25T06:16:47.343397+00:00",
+  "note": "Written from general attack patterns before any guard was run on it. Frozen: do not edit prompts. Guard rules must not be tuned against this file; use it only for measurement."
+}

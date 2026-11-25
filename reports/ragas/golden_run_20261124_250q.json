@@ -1,0 +1,43 @@
+{
+  "questions_run": 250,
+  "routes": {
+    "HYBRID_RAG": 250
+  },
+  "judge_model": "anthropic/claude-sonnet-5.5",
+  "answer_model": "anthropic/claude-sonnet-5.5",
+  "scored_samples": 238,
+  "dropped": 0,
+  "judge_errors": 0,
+  "metrics": {
+    "faithfulness": {
+      "mean": 1.0,
+      "n": 238,
+      "gate": 0.92,
+      "meets_gate": true
+    },
+    "answer_relevancy": {
+      "mean": 0.9068,
+      "n": 238,
+      "gate": 0.9,
+      "meets_gate": true
+    },
+    "context_precision": {
+      "mean": 0.8669,
+      "n": 238,
+      "gate": 0.88,
+      "meets_gate": false,
+      "note": "All scored responses. Unanswerable questions score 0; not the gate figure."
+    },
+    "context_precision_answerable_only": {
+      "mean": 0.9687,
+      "n": 213,
+      "gate": 0.88,
+      "meets_gate": true,
+      "note": "Gate figure (answerable questions only, decided by the user)."
+    }
+  },
+  "elapsed_min": 26.51,
+  "state_db": "reports/ragas/golden_run_20261124_250q.sqlite",
+  "questions_scored_note": "Only answered retrieval responses with citations are scored; abstentions are not.",
+  "note": "Synthetic golden set. RAGAS-style metrics from an LLM judge (same model as the answer model, so self-judged). Not the ragas library, and not KPI sign-off."
+}

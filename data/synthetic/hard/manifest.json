@@ -1,0 +1,9 @@
+{
+  "generator": "generate_hard_set.py",
+  "seed": 20261119,
+  "synthetic": true,
+  "corpus_notes": 98,
+  "lookalike_notes": 60,
+  "questions": 200,
+  "sha256_golden_hard": "a2a3ceaa708362877f1d483f58545020e8c163546549d7a569bc87ad6aa9ae0a"
+}

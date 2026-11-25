@@ -1,0 +1,14 @@
+{
+  "passages": 38,
+  "timing_median_ms_per_batch": {
+    "pytorch_fp32": 14705.6,
+    "onnx_fp32": 13963.8,
+    "onnx_fp16": 14501.0
+  },
+  "max_abs_score_diff_vs_pytorch": {
+    "onnx_fp32": 2.6e-06,
+    "onnx_fp16": 0.001043
+  },
+  "method": "CPU, 4 threads, shared machine, median of 5 runs after 1 warm-up. The FP32 graph was exported to a temp folder and deleted afterwards.",
+  "note": "Not KPI-09 sign-off. KPI-09 is a p95 latency per query on the target hardware."
+}

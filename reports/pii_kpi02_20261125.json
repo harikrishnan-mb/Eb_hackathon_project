@@ -1,0 +1,33 @@
+{
+  "kpi": "KPI-02",
+  "set": "data/synthetic/pii_set.jsonl",
+  "spans": 100,
+  "protected_spans": 100,
+  "recall_pipeline": 1.0,
+  "recall_redaction_only": 0.8,
+  "by_kind": {
+    "email": {
+      "protected": 20,
+      "spans": 20
+    },
+    "phone": {
+      "protected": 20,
+      "spans": 20
+    },
+    "ssn": {
+      "protected": 20,
+      "spans": 20
+    },
+    "obfuscated_email": {
+      "protected": 20,
+      "spans": 20
+    },
+    "spelled_email": {
+      "protected": 20,
+      "spans": 20
+    }
+  },
+  "misses": [],
+  "measured_at": "2026-11-25T06:27:58.607938+00:00",
+  "note": "Pipeline recall counts a span protected if the guard redacts it or blocks the text. Phone pattern was added after this set showed the gap, so this figure is biased upward. Synthetic. Not KPI-02 sign-off (X11)."
+}

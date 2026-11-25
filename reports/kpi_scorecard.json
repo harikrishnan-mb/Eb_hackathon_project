@@ -1,0 +1,297 @@
+{
+  "summary": {
+    "generated_at": "2026-11-25T06:32:22.961573+00:00",
+    "kpis_total": 36,
+    "measured": 14,
+    "measured_and_passing": 10,
+    "note": "Synthetic or proxy values. Not KPI sign-off. A KPI is measured only if its source exists."
+  },
+  "kpis": {
+    "KPI-01": {
+      "kpi": "Pre-Hook Guardrail Latency (p95)",
+      "threshold": "\u2264 15 ms",
+      "status": "not measured",
+      "reason": "no artifact or check for this KPI yet"
+    },
+    "KPI-02": {
+      "kpi": "PII Redaction Recall (Email/Phone/SSN/Obfuscated)",
+      "threshold": "\u2265 99.8%",
+      "status": "measured",
+      "value": 0.8,
+      "gate": 0.998,
+      "op": ">=",
+      "passes": false,
+      "source": "reports/pii_kpi02_20261125.json",
+      "caveat": "regex redaction only; spelled emails are blocked, not redacted; set used for tuning"
+    },
+    "KPI-03": {
+      "kpi": "Prompt Injection Block Rate (Direct + Indirect)",
+      "threshold": "\u2265 99.5%",
+      "status": "measured",
+      "value": 0.65,
+      "gate": 0.995,
+      "op": ">=",
+      "passes": false,
+      "source": "reports/redteam/validation_v3_20261125.json",
+      "caveat": "60 own prompts, rule-based; not a benchmark"
+    },
+    "KPI-04": {
+      "kpi": "Triage Routing Accuracy",
+      "threshold": "\u2265 97.0%",
+      "status": "not measured",
+      "reason": "no artifact or check for this KPI yet"
+    },
+    "KPI-05": {
+      "kpi": "Triage Classification Latency (p95)",
+      "threshold": "\u2264 25 ms",
+      "status": "not measured",
+      "reason": "no artifact or check for this KPI yet"
+    },
+    "KPI-06": {
+      "kpi": "False Positive Refusal Rate on Benign Queries",
+      "threshold": "\u2264 1.0%",
+      "status": "measured",
+      "value": 0.0,
+      "gate": 0.01,
+      "op": "<=",
+      "passes": true,
+      "source": "data/synthetic/benign_set.jsonl (checked now)",
+      "caveat": "0/100 benign queries refused"
+    },
+    "KPI-07": {
+      "kpi": "Stage 1 BM25 Retrieval Latency (p95)",
+      "threshold": "\u2264 12 ms",
+      "status": "measured",
+      "value": 0.237,
+      "gate": 12,
+      "op": "<=",
+      "passes": true,
+      "source": "reports/retrieval/bm25_eval.json",
+      "caveat": "synthetic golden or retrieval set; CPU"
+    },
+    "KPI-08": {
+      "kpi": "Stage 2 Bi-Encoder + FAISS Latency (p95)",
+      "threshold": "\u2264 25 ms",
+      "status": "measured",
+      "value": 261.877,
+      "gate": 25,
+      "op": "<=",
+      "passes": false,
+      "source": "reports/retrieval/hybrid_eval.json",
+      "caveat": "CPU PyTorch dense+FAISS p95"
+    },
+    "KPI-09": {
+      "kpi": "Stage 3 Cross-Encoder Rerank Latency (p95)",
+      "threshold": "\u2264 45 ms",
+      "status": "measured",
+      "value": 18990.858,
+      "gate": 45,
+      "op": "<=",
+      "passes": false,
+      "source": "reports/retrieval/hybrid_eval.json",
+      "caveat": "CPU PyTorch reranker p95, not ONNX"
+    },
+    "KPI-10": {
+      "kpi": "Hybrid Context Recall@50",
+      "threshold": "\u2265 0.92",
+      "status": "measured",
+      "value": 1.0,
+      "gate": 0.92,
+      "op": ">=",
+      "passes": true,
+      "source": "reports/retrieval/hybrid_eval.json",
+      "caveat": "dense recall@50 as proxy; synthetic golden or retrieval set"
+    },
+    "KPI-11": {
+      "kpi": "Post-Rerank Context Precision@4",
+      "threshold": "\u2265 0.88",
+      "status": "measured",
+      "value": 0.9687,
+      "gate": 0.88,
+      "op": ">=",
+      "passes": true,
+      "source": "reports/ragas/golden_run_20261124_250q.json",
+      "caveat": "judge proxy, answerable questions, n=213"
+    },
+    "KPI-12": {
+      "kpi": "Mean Reciprocal Rank (MRR@4)",
+      "threshold": "\u2265 0.85",
+      "status": "measured",
+      "value": 0.9674,
+      "gate": 0.85,
+      "op": ">=",
+      "passes": true,
+      "source": "reports/retrieval/hybrid_eval.json",
+      "caveat": "synthetic golden or retrieval set"
+    },
+    "KPI-13": {
+      "kpi": "nDCG@4",
+      "threshold": "\u2265 0.86",
+      "status": "measured",
+      "value": 0.9339,
+      "gate": 0.86,
+      "op": ">=",
+      "passes": true,
+      "source": "reports/retrieval/hybrid_eval.json",
+      "caveat": "synthetic golden or retrieval set"
+    },
+    "KPI-14": {
+      "kpi": "Tool Schema First-Pass Validation Rate",
+      "threshold": "\u2265 96.0%",
+      "status": "not measured",
+      "reason": "no artifact or check for this KPI yet"
+    },
+    "KPI-15": {
+      "kpi": "Auto-Repair Success Rate on Malformed Args",
+      "threshold": "\u2265 90.0%",
+      "status": "not measured",
+      "reason": "no artifact or check for this KPI yet"
+    },
+    "KPI-16": {
+      "kpi": "Infinite Loop Escape Rate (Circuit Breaker)",
+      "threshold": "100.0%",
+      "status": "not measured",
+      "reason": "no artifact or check for this KPI yet"
+    },
+    "KPI-17": {
+      "kpi": "Mean ReAct Steps per Completed Task",
+      "threshold": "\u2264 2.2 steps",
+      "status": "not measured",
+      "reason": "no artifact or check for this KPI yet"
+    },
+    "KPI-18": {
+      "kpi": "Context Drift Score (Goal Cosine Alignment)",
+      "threshold": "\u2265 0.85",
+      "status": "not measured",
+      "reason": "no artifact or check for this KPI yet"
+    },
+    "KPI-19": {
+      "kpi": "Tier 3 HITL Gate Enforcement Rate",
+      "threshold": "100.0%",
+      "status": "not measured",
+      "reason": "no artifact or check for this KPI yet"
+    },
+    "KPI-20": {
+      "kpi": "RAGAS Faithfulness Score",
+      "threshold": "\u2265 0.92",
+      "status": "measured",
+      "value": 1.0,
+      "gate": 0.92,
+      "op": ">=",
+      "passes": true,
+      "source": "reports/ragas/golden_run_20261124_250q.json",
+      "caveat": "judge proxy, self-judged, n=238"
+    },
+    "KPI-21": {
+      "kpi": "RAGAS Answer Relevancy Score",
+      "threshold": "\u2265 0.90",
+      "status": "measured",
+      "value": 0.9068,
+      "gate": 0.9,
+      "op": ">=",
+      "passes": true,
+      "source": "reports/ragas/golden_run_20261124_250q.json",
+      "caveat": "judge proxy, self-judged, n=238"
+    },
+    "KPI-22": {
+      "kpi": "RAGAS Context Entity Recall",
+      "threshold": "\u2265 0.85",
+      "status": "measured",
+      "value": 1.0,
+      "gate": 0.85,
+      "op": ">=",
+      "passes": true,
+      "source": "reports/retrieval/entity_recall_golden.json",
+      "caveat": "lexical proxy, not the judge; 1.0 means this set cannot discriminate"
+    },
+    "KPI-23": {
+      "kpi": "Unanswerable Query Abstention Accuracy",
+      "threshold": "\u2265 98.0%",
+      "status": "measured",
+      "value": 1.0,
+      "gate": 0.98,
+      "op": ">=",
+      "passes": true,
+      "source": "reports/retrieval/hybrid_eval.json",
+      "caveat": "only 9 unanswerable questions; too small to test 98%"
+    },
+    "KPI-24": {
+      "kpi": "Unsupported Claim / Hallucination Rate",
+      "threshold": "\u2264 0.5%",
+      "status": "not measured",
+      "reason": "no artifact or check for this KPI yet"
+    },
+    "KPI-25": {
+      "kpi": "Time-To-First-Token (TTFT p95)",
+      "threshold": "\u2264 180 ms",
+      "status": "not measured",
+      "reason": "no artifact or check for this KPI yet"
+    },
+    "KPI-26": {
+      "kpi": "Prompt Token Reduction via Graphify + Obsidian",
+      "threshold": "\u2265 45.0%",
+      "status": "not measured",
+      "reason": "no artifact or check for this KPI yet"
+    },
+    "KPI-27": {
+      "kpi": "Semantic Cache Hit Ratio (Steady State)",
+      "threshold": "\u2265 35.0%",
+      "status": "not measured",
+      "reason": "no artifact or check for this KPI yet"
+    },
+    "KPI-28": {
+      "kpi": "Cross-Tenant Cache Isolation Integrity",
+      "threshold": "100.0% (0 leaks)",
+      "status": "not measured",
+      "reason": "no artifact or check for this KPI yet"
+    },
+    "KPI-29": {
+      "kpi": "Cost per 1,000 Enterprise Queries",
+      "threshold": "\u2264 $0.45",
+      "status": "not measured",
+      "reason": "no artifact or check for this KPI yet"
+    },
+    "KPI-30": {
+      "kpi": "MCP JSON-RPC Serialization Overhead (p95)",
+      "threshold": "\u2264 4 ms",
+      "status": "not measured",
+      "reason": "no artifact or check for this KPI yet"
+    },
+    "KPI-31": {
+      "kpi": "End-to-End Response Latency (p50) @ 50K VUs",
+      "threshold": "\u2264 240 ms",
+      "status": "not measured",
+      "reason": "no artifact or check for this KPI yet"
+    },
+    "KPI-32": {
+      "kpi": "End-to-End Response Latency (p95) @ 50K VUs",
+      "threshold": "\u2264 450 ms",
+      "status": "not measured",
+      "reason": "no artifact or check for this KPI yet"
+    },
+    "KPI-33": {
+      "kpi": "End-to-End Response Latency (p99) @ 50K VUs",
+      "threshold": "**\u2264 590 ms (< 600 ms)**",
+      "status": "not measured",
+      "reason": "no artifact or check for this KPI yet"
+    },
+    "KPI-34": {
+      "kpi": "HTTP 5xx Error Rate @ 50K VUs",
+      "threshold": "\u2264 0.05%",
+      "status": "not measured",
+      "reason": "no artifact or check for this KPI yet"
+    },
+    "KPI-35": {
+      "kpi": "Sustained Throughput (Requests/Sec)",
+      "threshold": "\u2265 8,500 RPS",
+      "status": "not measured",
+      "reason": "no artifact or check for this KPI yet"
+    },
+    "KPI-36": {
+      "kpi": "Memory Leak / RSS Growth over 1-Hr Soak",
+      "threshold": "\u2264 3.0% delta",
+      "status": "not measured",
+      "reason": "no artifact or check for this KPI yet"
+    }
+  }
+}

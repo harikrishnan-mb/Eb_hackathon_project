@@ -1,0 +1,102 @@
+digraph workflow {
+  graph [rankdir=TB, fontname="Helvetica", fontsize=16, pad=0.4, nodesep=0.3, ranksep=0.55, newrank=true, compound=true,
+         label="Unreliable Assistant → Enterprise Platform: Workflow Orchestration (Blueprint Gate 2)\nTargets @ 50K VUs: p50 ≤ 240 · p95 ≤ 450 · p99 ≤ 590 ms (KPI-31..33) · DRAFT: open items C5 (loop budget), C11 (cache key), C21 (RAGAS sync/async)", labelloc=t, bgcolor="white"];
+  node  [shape=box, style="rounded,filled", fillcolor="#F4F6F8", color="#5B6770", fontname="Helvetica", fontsize=11, margin="0.15,0.07"];
+  edge  [color="#5B6770", fontname="Helvetica", fontsize=9, arrowsize=0.7];
+
+  client [label="Client → NGINX/Envoy → FastAPI (stateless, async workers)\nPOST /api/v1/agent/query", shape=oval, fillcolor="#FFFFFF"];
+
+  subgraph cluster_ingress {
+    label="1 · Ingress & Security Layer (Pre-Execution Plugins)"; style="rounded,filled"; fillcolor="#FDECEC"; color="#B3261E"; fontcolor="#7A1B15";
+    pii  [label="PII Redactor · PRE_EXECUTION · prio 10 · fail_closed\nhook.pre p95 ≤ 15 ms (KPI-01) · recall ≥ 99.8% (KPI-02)"];
+    inj  [label="Injection Classifier (injection_shield) · PRE_EXECUTION · prio 20 · fail_closed\nblock rate ≥ 99.5% (KPI-03)"];
+    cache [label="Redis Semantic Cache Check\nkey = SHA256(tenant_id:user_id:norm_query) · TTL 300 s ± 45 s\ncosine ≥ 0.92 mitigation · semantic vs exact: open (C11 / X2)", shape=diamond, fillcolor="#FFF4E5", margin="0.03,0.02"];
+    hit  [label="HIT → cached answer\n(tenant-isolated · KPI-28: 0 leaks)", fillcolor="#E8F5E9"];
+  }
+
+  subgraph cluster_triage {
+    label="2 · Triage & Subagent Routing"; style="rounded,filled"; fillcolor="#FFF8E1"; color="#B26A00"; fontcolor="#7A4A00";
+    triage [label="Triage Agent · temperature = 0.0\nKPI-05 p95 ≤ 25 ms (Gate 2 text says < 30 ms; C2)\ntags (intent, domain, risk_tier, complexity)", fillcolor="#FFFFFF"];
+    direct [label="Direct Response\nDIRECT_ANSWER", fillcolor="#E8F5E9"];
+    reject [label="REJECT_OOS\nno LLM call", fillcolor="#E8F5E9"];
+  }
+
+  subgraph cluster_subagents {
+    label="3 · Subagents (every MCP call passes ToolExecutionHarness)"; style="rounded,filled"; fillcolor="#EEF6FF"; color="#1A56DB"; fontcolor="#123C8C";
+    retr [label="Retrieval Subagent · HYBRID_RAG\nquery rewrite · 3-stage RAG · citation grounding\nread-only: cannot call state-mutating tools"];
+    exec [label="Execution Subagent · TRANSACTION_EXEC\nschema validation · form submission · workflow transitions\nno RAG / no external web · Tier 3 triggers HITL freeze"];
+    verif [label="Audit / Verification Subagent (C7 assumption)\nclaim↔chunk NLI · RAGAS triad audit · OTel logging\nvetoes ungrounded drafts · mcp-state-store audit log only"];
+    harness [label="ToolExecutionHarness (in order)\n1 strict Pydantic v2  →  2 regex auto-repair (SKU99→SKU-099, lot 44→LOT-00044)\n→  3 RBAC tier check (TIER_1_READ / TIER_2_COMPUTE / TIER_3_MUTATE)  →  4 UUIDv4 idempotency", fillcolor="#FFFFFF", shape=note];
+  }
+
+  subgraph cluster_mcp {
+    label="4 · MCP servers (JSON-RPC 2.0) & 3-Stage Hybrid RAG"; style="rounded,filled"; fillcolor="#E8F0FE"; color="#1A56DB"; fontcolor="#123C8C";
+    subgraph cluster_rag {
+      label="mcp-hybrid-rag (stdio · timeout 150 ms · rag_server.py)"; style="rounded,dashed"; color="#1A56DB"; fontcolor="#123C8C";
+      bm25  [label="Stage 1 · BM25Okapi + PorterStemmer\nk1 1.25 · b 0.75 · top_k 50 · < 12 ms"];
+      dense [label="Stage 2 · Bi-Encoder bge-large-en-v1.5 ONNX + FAISS HNSW\nchunk 512 / overlap 64 · efSearch 64 · top_k 50 · < 25 ms"];
+      rrf   [label="RRF fusion · k 60 · dedup chunk_hash\npool 40 · < 3 ms"];
+      rerank [label="Stage 3 · Cross-Encoder bge-reranker-v2-m3 ONNX FP16\nbatch 32 · rerank_k 4 · sigmoid > 0.42 · max_len 512 · < 45 ms"];
+      abst  [label="top score < 0.42 → deterministic abstention\nno LLM call · < 90 ms (clock start: open X3)", fillcolor="#E8F5E9"];
+    }
+    graph_srv [label="mcp-graphify-vault (stdio)\n[[wikilink]] + dependency graph · depth ≤ 2 · ~320 tok (vs ~1,400)"];
+    state [label="mcp-state-store (Streamable HTTP · pool_size 200)\nPostgres (pgvector · audit log · session_facts) + Redis Cluster"];
+  }
+
+  subgraph cluster_control {
+    label="5 · Control Plane & Egress"; style="rounded,filled"; fillcolor="#F3E8FD"; color="#6A1B9A"; fontcolor="#4A148C";
+    react [label="Bounded ReAct Loop · max_steps = 5 · per_step_timeout 120 ms\ntotal_loop_budget 450 ms (Blueprint) / 380 ms (proposed, C5)\nINIT→TRIAGE→REASONING→TOOL_CALL→OBSERVATION→VERIFY→DONE | HALTED\nGoalAnchorBlock at index 0 · observations ≤ 180 tok · last 3 turns"];
+    llm  [label="LLM serving · vLLM / TensorRT-LLM\ncontinuous batching · prefix caching · TTFT p95 ≤ 180 ms", shape=cylinder, fillcolor="#FFFFFF"];
+    breaker [label="Circuit Breaker\n(tool_name, canonical_args_hash) fails ≥ 2\n→ HALTED_BREAKER + remediation prompt", fillcolor="#FFF4E5"];
+    hitl [label="Tier 3 HITL Gate\nTIER_3_MUTATE → PENDING_APPROVAL (Postgres)\nawait reviewer approve / reject (UI / API) · KPI-19 = 100%\nnon-Tier-3 results pass through", shape=octagon, fillcolor="#FDECEC", color="#B3261E"];
+    post [label="Post-Execution: RAGAS & OTel Export\nragas_auditor min_faithfulness 0.92 · W3C traceparent\nsync vs async: open (C21)"];
+    otel [label="OTel Collector → Prometheus + Tempo → Grafana", shape=cylinder, fillcolor="#FFFFFF"];
+    resp [label="Response to client", shape=oval, fillcolor="#FFFFFF"];
+  }
+
+  // Ingress
+  client -> pii -> inj -> cache;
+  cache -> hit [label="hit"];
+  hit -> resp [style=dashed];
+  cache -> triage [label="miss"];
+
+  // Triage branches (Gate 2: Direct, Retrieval, Execution, Audit)
+  triage -> direct [label="DIRECT_ANSWER"];
+  triage -> retr   [label="HYBRID_RAG"];
+  triage -> exec   [label="TRANSACTION_EXEC"];
+  triage -> verif  [label="Audit branch (Gate 2)"];
+  triage -> reject [label="REJECT_OOS"];
+  reject -> resp [style=dashed];
+  direct -> llm [label="draft"];
+
+  // Subagents -> harness -> MCP
+  retr -> harness [label="tool call"];
+  exec -> harness [label="tool call"];
+  verif -> harness [label="audit_append", style=dotted];
+  harness -> bm25 [label="hybrid_retrieve"];
+  harness -> dense [label="hybrid_retrieve"];
+  harness -> graph_srv [label="graph_subgraph"];
+  harness -> state [label="session / HITL / audit"];
+
+  // RAG pipeline
+  bm25 -> rrf;
+  dense -> rrf;
+  rrf -> rerank;
+  rerank -> abst [label="< 0.42", style=dashed];
+  abst -> resp [style=dashed];
+  rerank -> react [label="top-4 chunks"];
+  graph_srv -> react [label="subgraph"];
+
+  // Control plane chain (Gate 2): ReAct -> Breaker -> HITL -> Post-Execution
+  react -> llm [label="generate"];
+  llm -> react [label="stream", style=dashed];
+  react -> verif [label="VERIFY"];
+  react -> breaker [label="tool result"];
+  breaker -> hitl;
+  exec -> hitl [label="Tier 3 mutation", color="#B3261E", fontcolor="#B3261E"];
+  hitl -> state [label="approved", style=dashed];
+  hitl -> post;
+  verif -> post [label="verdict / veto"];
+  post -> resp;
+  post -> otel [style=dotted, label="spans"];
+}

@@ -1,0 +1,17 @@
+[project]
+name = "unreliable-assistant"
+version = "0.1.0"
+description = "Enterprise agentic assistant (MCP, tenant-isolated, HITL-gated). See CLAUDE.md and design.md."
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2.7",
+    "anthropic>=0.40",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+services = ["psycopg[binary]>=3.1", "psycopg-pool>=3.2", "redis>=5"]  # Postgres state store and Redis cache
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

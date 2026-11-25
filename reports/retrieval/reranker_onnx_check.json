@@ -1,0 +1,14 @@
+{
+  "model": "BAAI/bge-reranker-v2-m3",
+  "export": "torch.onnx (opset 17, legacy exporter), then FP16 weights; I/O types kept FP32",
+  "fp16_model_mb": 1136.1,
+  "fp32_model_mb_before_conversion": 2271.6,
+  "pairs_checked": 12,
+  "max_abs_score_diff": 0.000107,
+  "mean_abs_score_diff": 1.2e-05,
+  "top1_order_agrees": true,
+  "threshold_0_42_decisions_agree": true,
+  "pairs_ms_pytorch_cpu": 2095.6,
+  "pairs_ms_onnx_fp16_cpu": 8098.2,
+  "note": "CPU, shared machine, one batch of 12 pairs. Not KPI-09 sign-off."
+}

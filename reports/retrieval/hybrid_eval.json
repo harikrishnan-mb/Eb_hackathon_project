@@ -1,0 +1,48 @@
+{
+  "stages": "BM25 + bge-large dense -> RRF(k=60,pool=40) -> bge-reranker-v2-m3 (PyTorch CPU)",
+  "answerable_questions": 46,
+  "negative_questions": 9,
+  "chunks": 38,
+  "retrieval": {
+    "bm25_recall_at_50": 1.0,
+    "dense_recall_at_50": 1.0,
+    "rrf_recall_at_40": 1.0,
+    "rrf_mrr_at_4": 0.913,
+    "rrf_ndcg_at_4": 0.9244
+  },
+  "after_rerank": {
+    "mrr_at_4": 0.9674,
+    "ndcg_at_4": 0.9339,
+    "ndcg_at_4_by_type": {
+      "complex": 0.9769,
+      "factoid": 1.0,
+      "multi_hop": 0.8242,
+      "summary": 0.9077
+    },
+    "false_abstention_rate": 0.0435
+  },
+  "abstention": {
+    "threshold": 0.42,
+    "negatives_abstained": 9,
+    "accuracy": 1.0
+  },
+  "latency_ms_p50_p95": {
+    "bm25": [
+      0.244,
+      0.308
+    ],
+    "dense": [
+      160.458,
+      261.877
+    ],
+    "rrf": [
+      0.083,
+      0.101
+    ],
+    "rerank": [
+      14980.269,
+      18990.858
+    ]
+  },
+  "note": "Synthetic, easy corpus of 38 notes. CPU PyTorch reranker, not ONNX FP16. Not KPI sign-off."
+}

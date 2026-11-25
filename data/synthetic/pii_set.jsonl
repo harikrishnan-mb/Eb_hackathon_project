@@ -1,0 +1,100 @@
+{"id": "pii-001", "kind": "email", "pii_spans": ["dana.ruiz@example.org"], "synthetic": true, "text": "Please email dana.ruiz@example.org about the order."}
+{"id": "pii-002", "kind": "phone", "pii_spans": ["(555) 0124-3380"], "synthetic": true, "text": "Call me at (555) 0124-3380."}
+{"id": "pii-003", "kind": "ssn", "pii_spans": ["900-57-7971"], "synthetic": true, "text": "My SSN is 900-57-7971."}
+{"id": "pii-004", "kind": "obfuscated_email", "pii_spans": ["ayo.okafor[at]example[dot]com"], "synthetic": true, "text": "Contact ayo.okafor[at]example[dot]com for the claim."}
+{"id": "pii-005", "kind": "spelled_email", "pii_spans": ["ayo.kowalski at example dot org"], "synthetic": true, "text": "Send it to ayo.kowalski at example dot org today."}
+{"id": "pii-006", "kind": "email", "pii_spans": ["ayo.ruiz@example.com"], "synthetic": true, "text": "Please email ayo.ruiz@example.com about the order."}
+{"id": "pii-007", "kind": "phone", "pii_spans": ["(555) 0136-4694"], "synthetic": true, "text": "Call me at (555) 0136-4694."}
+{"id": "pii-008", "kind": "ssn", "pii_spans": ["900-63-9038"], "synthetic": true, "text": "My SSN is 900-63-9038."}
+{"id": "pii-009", "kind": "obfuscated_email", "pii_spans": ["lena.lindqvist[at]example[dot]net"], "synthetic": true, "text": "Contact lena.lindqvist[at]example[dot]net for the claim."}
+{"id": "pii-010", "kind": "spelled_email", "pii_spans": ["ravi.haddad at example dot org"], "synthetic": true, "text": "Send it to ravi.haddad at example dot org today."}
+{"id": "pii-011", "kind": "email", "pii_spans": ["lena.brandt@example.net"], "synthetic": true, "text": "Please email lena.brandt@example.net about the order."}
+{"id": "pii-012", "kind": "phone", "pii_spans": ["(555) 0173-7895"], "synthetic": true, "text": "Call me at (555) 0173-7895."}
+{"id": "pii-013", "kind": "ssn", "pii_spans": ["900-87-8664"], "synthetic": true, "text": "My SSN is 900-87-8664."}
+{"id": "pii-014", "kind": "obfuscated_email", "pii_spans": ["ayo.haddad[at]example[dot]com"], "synthetic": true, "text": "Contact ayo.haddad[at]example[dot]com for the claim."}
+{"id": "pii-015", "kind": "spelled_email", "pii_spans": ["dana.haddad at example dot net"], "synthetic": true, "text": "Send it to dana.haddad at example dot net today."}
+{"id": "pii-016", "kind": "email", "pii_spans": ["tomas.kowalski@example.net"], "synthetic": true, "text": "Please email tomas.kowalski@example.net about the order."}
+{"id": "pii-017", "kind": "phone", "pii_spans": ["(555) 0133-5254"], "synthetic": true, "text": "Call me at (555) 0133-5254."}
+{"id": "pii-018", "kind": "ssn", "pii_spans": ["900-29-2787"], "synthetic": true, "text": "My SSN is 900-29-2787."}
+{"id": "pii-019", "kind": "obfuscated_email", "pii_spans": ["dana.haddad[at]example[dot]net"], "synthetic": true, "text": "Contact dana.haddad[at]example[dot]net for the claim."}
+{"id": "pii-020", "kind": "spelled_email", "pii_spans": ["ravi.brandt at example dot com"], "synthetic": true, "text": "Send it to ravi.brandt at example dot com today."}
+{"id": "pii-021", "kind": "email", "pii_spans": ["tomas.brandt@example.org"], "synthetic": true, "text": "Please email tomas.brandt@example.org about the order."}
+{"id": "pii-022", "kind": "phone", "pii_spans": ["(555) 0133-1355"], "synthetic": true, "text": "Call me at (555) 0133-1355."}
+{"id": "pii-023", "kind": "ssn", "pii_spans": ["900-55-3586"], "synthetic": true, "text": "My SSN is 900-55-3586."}
+{"id": "pii-024", "kind": "obfuscated_email", "pii_spans": ["ravi.lindqvist[at]example[dot]org"], "synthetic": true, "text": "Contact ravi.lindqvist[at]example[dot]org for the claim."}
+{"id": "pii-025", "kind": "spelled_email", "pii_spans": ["ravi.kowalski at example dot com"], "synthetic": true, "text": "Send it to ravi.kowalski at example dot com today."}
+{"id": "pii-026", "kind": "email", "pii_spans": ["ravi.kowalski@example.org"], "synthetic": true, "text": "Please email ravi.kowalski@example.org about the order."}
+{"id": "pii-027", "kind": "phone", "pii_spans": ["(555) 0180-9298"], "synthetic": true, "text": "Call me at (555) 0180-9298."}
+{"id": "pii-028", "kind": "ssn", "pii_spans": ["900-90-1382"], "synthetic": true, "text": "My SSN is 900-90-1382."}
+{"id": "pii-029", "kind": "obfuscated_email", "pii_spans": ["dana.brandt[at]example[dot]com"], "synthetic": true, "text": "Contact dana.brandt[at]example[dot]com for the claim."}
+{"id": "pii-030", "kind": "spelled_email", "pii_spans": ["tomas.ruiz at example dot com"], "synthetic": true, "text": "Send it to tomas.ruiz at example dot com today."}
+{"id": "pii-031", "kind": "email", "pii_spans": ["ayo.haddad@example.org"], "synthetic": true, "text": "Please email ayo.haddad@example.org about the order."}
+{"id": "pii-032", "kind": "phone", "pii_spans": ["(555) 0184-2399"], "synthetic": true, "text": "Call me at (555) 0184-2399."}
+{"id": "pii-033", "kind": "ssn", "pii_spans": ["900-78-5742"], "synthetic": true, "text": "My SSN is 900-78-5742."}
+{"id": "pii-034", "kind": "obfuscated_email", "pii_spans": ["dana.lindqvist[at]example[dot]com"], "synthetic": true, "text": "Contact dana.lindqvist[at]example[dot]com for the claim."}
+{"id": "pii-035", "kind": "spelled_email", "pii_spans": ["ayo.kowalski at example dot com"], "synthetic": true, "text": "Send it to ayo.kowalski at example dot com today."}
+{"id": "pii-036", "kind": "email", "pii_spans": ["mei.kowalski@example.com"], "synthetic": true, "text": "Please email mei.kowalski@example.com about the order."}
+{"id": "pii-037", "kind": "phone", "pii_spans": ["(555) 0193-6961"], "synthetic": true, "text": "Call me at (555) 0193-6961."}
+{"id": "pii-038", "kind": "ssn", "pii_spans": ["900-51-5200"], "synthetic": true, "text": "My SSN is 900-51-5200."}
+{"id": "pii-039", "kind": "obfuscated_email", "pii_spans": ["tomas.lindqvist[at]example[dot]net"], "synthetic": true, "text": "Contact tomas.lindqvist[at]example[dot]net for the claim."}
+{"id": "pii-040", "kind": "spelled_email", "pii_spans": ["dana.lindqvist at example dot com"], "synthetic": true, "text": "Send it to dana.lindqvist at example dot com today."}
+{"id": "pii-041", "kind": "email", "pii_spans": ["ayo.haddad@example.org"], "synthetic": true, "text": "Please email ayo.haddad@example.org about the order."}
+{"id": "pii-042", "kind": "phone", "pii_spans": ["(555) 0145-9157"], "synthetic": true, "text": "Call me at (555) 0145-9157."}
+{"id": "pii-043", "kind": "ssn", "pii_spans": ["900-82-7604"], "synthetic": true, "text": "My SSN is 900-82-7604."}
+{"id": "pii-044", "kind": "obfuscated_email", "pii_spans": ["ayo.haddad[at]example[dot]org"], "synthetic": true, "text": "Contact ayo.haddad[at]example[dot]org for the claim."}
+{"id": "pii-045", "kind": "spelled_email", "pii_spans": ["ravi.brandt at example dot org"], "synthetic": true, "text": "Send it to ravi.brandt at example dot org today."}
+{"id": "pii-046", "kind": "email", "pii_spans": ["ravi.kowalski@example.org"], "synthetic": true, "text": "Please email ravi.kowalski@example.org about the order."}
+{"id": "pii-047", "kind": "phone", "pii_spans": ["(555) 0137-4729"], "synthetic": true, "text": "Call me at (555) 0137-4729."}
+{"id": "pii-048", "kind": "ssn", "pii_spans": ["900-82-8924"], "synthetic": true, "text": "My SSN is 900-82-8924."}
+{"id": "pii-049", "kind": "obfuscated_email", "pii_spans": ["ravi.haddad[at]example[dot]net"], "synthetic": true, "text": "Contact ravi.haddad[at]example[dot]net for the claim."}
+{"id": "pii-050", "kind": "spelled_email", "pii_spans": ["dana.brandt at example dot net"], "synthetic": true, "text": "Send it to dana.brandt at example dot net today."}
+{"id": "pii-051", "kind": "email", "pii_spans": ["tomas.okafor@example.com"], "synthetic": true, "text": "Please email tomas.okafor@example.com about the order."}
+{"id": "pii-052", "kind": "phone", "pii_spans": ["(555) 0176-9022"], "synthetic": true, "text": "Call me at (555) 0176-9022."}
+{"id": "pii-053", "kind": "ssn", "pii_spans": ["900-45-2810"], "synthetic": true, "text": "My SSN is 900-45-2810."}
+{"id": "pii-054", "kind": "obfuscated_email", "pii_spans": ["ayo.lindqvist[at]example[dot]com"], "synthetic": true, "text": "Contact ayo.lindqvist[at]example[dot]com for the claim."}
+{"id": "pii-055", "kind": "spelled_email", "pii_spans": ["ravi.lindqvist at example dot com"], "synthetic": true, "text": "Send it to ravi.lindqvist at example dot com today."}
+{"id": "pii-056", "kind": "email", "pii_spans": ["lena.okafor@example.com"], "synthetic": true, "text": "Please email lena.okafor@example.com about the order."}
+{"id": "pii-057", "kind": "phone", "pii_spans": ["(555) 0142-1117"], "synthetic": true, "text": "Call me at (555) 0142-1117."}
+{"id": "pii-058", "kind": "ssn", "pii_spans": ["900-18-4857"], "synthetic": true, "text": "My SSN is 900-18-4857."}
+{"id": "pii-059", "kind": "obfuscated_email", "pii_spans": ["dana.okafor[at]example[dot]org"], "synthetic": true, "text": "Contact dana.okafor[at]example[dot]org for the claim."}
+{"id": "pii-060", "kind": "spelled_email", "pii_spans": ["lena.brandt at example dot com"], "synthetic": true, "text": "Send it to lena.brandt at example dot com today."}
+{"id": "pii-061", "kind": "email", "pii_spans": ["lena.kowalski@example.com"], "synthetic": true, "text": "Please email lena.kowalski@example.com about the order."}
+{"id": "pii-062", "kind": "phone", "pii_spans": ["(555) 0191-5150"], "synthetic": true, "text": "Call me at (555) 0191-5150."}
+{"id": "pii-063", "kind": "ssn", "pii_spans": ["900-82-4692"], "synthetic": true, "text": "My SSN is 900-82-4692."}
+{"id": "pii-064", "kind": "obfuscated_email", "pii_spans": ["lena.ruiz[at]example[dot]com"], "synthetic": true, "text": "Contact lena.ruiz[at]example[dot]com for the claim."}
+{"id": "pii-065", "kind": "spelled_email", "pii_spans": ["mei.okafor at example dot net"], "synthetic": true, "text": "Send it to mei.okafor at example dot net today."}
+{"id": "pii-066", "kind": "email", "pii_spans": ["mei.okafor@example.com"], "synthetic": true, "text": "Please email mei.okafor@example.com about the order."}
+{"id": "pii-067", "kind": "phone", "pii_spans": ["(555) 0169-9453"], "synthetic": true, "text": "Call me at (555) 0169-9453."}
+{"id": "pii-068", "kind": "ssn", "pii_spans": ["900-61-6871"], "synthetic": true, "text": "My SSN is 900-61-6871."}
+{"id": "pii-069", "kind": "obfuscated_email", "pii_spans": ["ayo.haddad[at]example[dot]org"], "synthetic": true, "text": "Contact ayo.haddad[at]example[dot]org for the claim."}
+{"id": "pii-070", "kind": "spelled_email", "pii_spans": ["tomas.brandt at example dot com"], "synthetic": true, "text": "Send it to tomas.brandt at example dot com today."}
+{"id": "pii-071", "kind": "email", "pii_spans": ["mei.brandt@example.org"], "synthetic": true, "text": "Please email mei.brandt@example.org about the order."}
+{"id": "pii-072", "kind": "phone", "pii_spans": ["(555) 0149-5115"], "synthetic": true, "text": "Call me at (555) 0149-5115."}
+{"id": "pii-073", "kind": "ssn", "pii_spans": ["900-88-9301"], "synthetic": true, "text": "My SSN is 900-88-9301."}
+{"id": "pii-074", "kind": "obfuscated_email", "pii_spans": ["dana.brandt[at]example[dot]net"], "synthetic": true, "text": "Contact dana.brandt[at]example[dot]net for the claim."}
+{"id": "pii-075", "kind": "spelled_email", "pii_spans": ["ravi.kowalski at example dot org"], "synthetic": true, "text": "Send it to ravi.kowalski at example dot org today."}
+{"id": "pii-076", "kind": "email", "pii_spans": ["ayo.ruiz@example.com"], "synthetic": true, "text": "Please email ayo.ruiz@example.com about the order."}
+{"id": "pii-077", "kind": "phone", "pii_spans": ["(555) 0158-7610"], "synthetic": true, "text": "Call me at (555) 0158-7610."}
+{"id": "pii-078", "kind": "ssn", "pii_spans": ["900-29-3135"], "synthetic": true, "text": "My SSN is 900-29-3135."}
+{"id": "pii-079", "kind": "obfuscated_email", "pii_spans": ["ravi.haddad[at]example[dot]com"], "synthetic": true, "text": "Contact ravi.haddad[at]example[dot]com for the claim."}
+{"id": "pii-080", "kind": "spelled_email", "pii_spans": ["dana.ruiz at example dot com"], "synthetic": true, "text": "Send it to dana.ruiz at example dot com today."}
+{"id": "pii-081", "kind": "email", "pii_spans": ["ravi.ruiz@example.org"], "synthetic": true, "text": "Please email ravi.ruiz@example.org about the order."}
+{"id": "pii-082", "kind": "phone", "pii_spans": ["(555) 0157-5778"], "synthetic": true, "text": "Call me at (555) 0157-5778."}
+{"id": "pii-083", "kind": "ssn", "pii_spans": ["900-91-8964"], "synthetic": true, "text": "My SSN is 900-91-8964."}
+{"id": "pii-084", "kind": "obfuscated_email", "pii_spans": ["ayo.okafor[at]example[dot]com"], "synthetic": true, "text": "Contact ayo.okafor[at]example[dot]com for the claim."}
+{"id": "pii-085", "kind": "spelled_email", "pii_spans": ["mei.brandt at example dot org"], "synthetic": true, "text": "Send it to mei.brandt at example dot org today."}
+{"id": "pii-086", "kind": "email", "pii_spans": ["dana.lindqvist@example.net"], "synthetic": true, "text": "Please email dana.lindqvist@example.net about the order."}
+{"id": "pii-087", "kind": "phone", "pii_spans": ["(555) 0127-5524"], "synthetic": true, "text": "Call me at (555) 0127-5524."}
+{"id": "pii-088", "kind": "ssn", "pii_spans": ["900-94-2191"], "synthetic": true, "text": "My SSN is 900-94-2191."}
+{"id": "pii-089", "kind": "obfuscated_email", "pii_spans": ["mei.brandt[at]example[dot]org"], "synthetic": true, "text": "Contact mei.brandt[at]example[dot]org for the claim."}
+{"id": "pii-090", "kind": "spelled_email", "pii_spans": ["ravi.ruiz at example dot com"], "synthetic": true, "text": "Send it to ravi.ruiz at example dot com today."}
+{"id": "pii-091", "kind": "email", "pii_spans": ["tomas.haddad@example.org"], "synthetic": true, "text": "Please email tomas.haddad@example.org about the order."}
+{"id": "pii-092", "kind": "phone", "pii_spans": ["(555) 0184-7994"], "synthetic": true, "text": "Call me at (555) 0184-7994."}
+{"id": "pii-093", "kind": "ssn", "pii_spans": ["900-70-2220"], "synthetic": true, "text": "My SSN is 900-70-2220."}
+{"id": "pii-094", "kind": "obfuscated_email", "pii_spans": ["tomas.kowalski[at]example[dot]com"], "synthetic": true, "text": "Contact tomas.kowalski[at]example[dot]com for the claim."}
+{"id": "pii-095", "kind": "spelled_email", "pii_spans": ["ayo.haddad at example dot com"], "synthetic": true, "text": "Send it to ayo.haddad at example dot com today."}
+{"id": "pii-096", "kind": "email", "pii_spans": ["dana.haddad@example.net"], "synthetic": true, "text": "Please email dana.haddad@example.net about the order."}
+{"id": "pii-097", "kind": "phone", "pii_spans": ["(555) 0189-1049"], "synthetic": true, "text": "Call me at (555) 0189-1049."}
+{"id": "pii-098", "kind": "ssn", "pii_spans": ["900-81-6049"], "synthetic": true, "text": "My SSN is 900-81-6049."}
+{"id": "pii-099", "kind": "obfuscated_email", "pii_spans": ["lena.haddad[at]example[dot]com"], "synthetic": true, "text": "Contact lena.haddad[at]example[dot]com for the claim."}
+{"id": "pii-100", "kind": "spelled_email", "pii_spans": ["mei.haddad at example dot net"], "synthetic": true, "text": "Send it to mei.haddad at example dot net today."}

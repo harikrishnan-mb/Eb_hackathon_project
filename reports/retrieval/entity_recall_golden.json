@@ -1,0 +1,8 @@
+{
+  "kpi": "KPI-22",
+  "method": "lexical entity overlap of gold answer with top-4 BM25 contexts; no judge",
+  "questions": 151,
+  "mean_entity_recall": 1.0,
+  "measured_at": "2026-11-25T06:32:11.894696+00:00",
+  "note": "Synthetic golden set. Lexical proxy, not the RAGAS judge. Not KPI sign-off."
+}

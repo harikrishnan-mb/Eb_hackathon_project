@@ -1,0 +1,17 @@
+{
+  "stage": "BM25 only (Stage 1)",
+  "corpus_notes": 38,
+  "queries": 213,
+  "recall_at_50": 1.0,
+  "mrr_at_4": 0.9687,
+  "ndcg_at_4": 0.9765,
+  "ndcg_at_4_by_type": {
+    "complex": 1.0,
+    "factoid": 1.0,
+    "multi_hop": 1.0,
+    "summary": 0.8684
+  },
+  "latency_ms_p50": 0.101,
+  "latency_ms_p95": 0.237,
+  "note": "Synthetic corpus of 38 short notes. Latency is not representative of 512-token chunks at scale."
+}

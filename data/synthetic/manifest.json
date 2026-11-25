@@ -1,0 +1,27 @@
+{
+  "corpus_notes": 38,
+  "counts": {
+    "benign_set": 100,
+    "golden_by_type": {
+      "complex": 62,
+      "factoid": 63,
+      "multi_hop": 50,
+      "negative": 37,
+      "summary": 38
+    },
+    "golden_set": 250,
+    "pii_set": 100,
+    "redteam_set": 100,
+    "routing_set": 200
+  },
+  "generator_version": "1.0.0",
+  "seed": 20261118,
+  "sha256": {
+    "benign_set.jsonl": "c141c3a443af7f3a02d13a7a24de7f23eafcaf5b91d03db3206ead2cb24acc8a",
+    "golden_set.jsonl": "d102b5f40ac0a9946aececf65a89d14dc164bda72518d367330ad06aac0463a1",
+    "pii_set.jsonl": "5b73f37f6ca52a6c9898bd09df0fe039b3c14b31cb609dba099ff3c939673334",
+    "redteam_set.jsonl": "a9de0825e3ae4b56a4c16703bc4ec589d3419e3ebbbeb6ac25cf34876b79b1fd",
+    "routing_set.jsonl": "c37b8f91d7f7a98f63a200db3e22f705d00a78cc336f1ea7617948188701ada3"
+  },
+  "synthetic": true
+}

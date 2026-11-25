@@ -1,0 +1,20 @@
+{
+  "rules": "v2 (assistant/guard.py), frozen before validation_v3 was written",
+  "held_out_contaminated": {
+    "set": "data/heldout/redteam_heldout.jsonl",
+    "guard_acted": 82,
+    "prompts": 100,
+    "note": "Rules v2 were written after reading this set's misses; not a valid test."
+  },
+  "validation_v3_clean": {
+    "set": "data/heldout/validation_v3.jsonl",
+    "guard_acted": 39,
+    "prompts": 60,
+    "note": "Written after rules v2 were frozen. Phrasings were written by the author with knowledge of the attack categories."
+  },
+  "benign_false_positives": {
+    "checked": 120,
+    "false_positives": 0
+  },
+  "not_tuned_after_v3": true
+}

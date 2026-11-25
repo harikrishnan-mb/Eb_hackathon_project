@@ -1,0 +1,30 @@
+// Gate 1.3 topology (CLAUDE.md §4). Built from the running code, not the spec alone.
+digraph topology {
+  rankdir=LR; fontname="Helvetica"; node [fontname="Helvetica", shape=box, style="rounded"];
+  client [label="Client / k6 / JMeter", shape=oval];
+  api [label="API: FastAPI + uvicorn\n(stateless; /healthz, /metrics)"];
+  guard [label="Guards (fail closed)\nPII redaction, threat rules v2"];
+  cache [label="Redis 7\nresponse cache (TTL 300 s +/- 45 s)", shape=cylinder];
+  rag [label="MCP hybrid-rag (stdio)\nBM25 -> bge-large dense -> RRF"];
+  rerank [label="bge-reranker-v2-m3\n(ONNX FP16 export; runs in PyTorch)", shape=component];
+  graphify [label="MCP graphify-vault (stdio)\nwikilink subgraph"];
+  state [label="MCP state-store (Streamable HTTP :8081)\nHITL, audit, session facts, RAGAS"];
+  pg [label="PostgreSQL 16\nua database", shape=cylinder];
+  llm [label="OpenRouter LLM\nanthropic/claude-sonnet-5.5", shape=oval];
+  ragas [label="RAGAS auditor (async worker)\nscores off the request path"];
+  prom [label="Prometheus\nscrapes /metrics; ops/alerts.yml", shape=oval];
+
+  client -> api [label="POST /api/v1/agent/query"];
+  api -> guard;
+  api -> cache [label="get / set"];
+  api -> rag [label="hybrid_retrieve (bulkhead 64)"];
+  rag -> rerank [label="rerank top 40"];
+  api -> graphify [style=dashed, label="not yet used by orchestrator"];
+  api -> state [label="hitl_status, hitl_request, audit_append"];
+  state -> pg;
+  api -> llm [label="generate (bulkhead 256)"];
+  api -> ragas [style=dashed, label="enqueue (RAGAS_ENABLED=1)"];
+  ragas -> llm [style=dashed, label="judge calls"];
+  ragas -> pg [style=dashed, label="ragas_scores"];
+  prom -> api [label="scrape /metrics", style=dotted];
+}

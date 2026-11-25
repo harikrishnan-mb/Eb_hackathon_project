@@ -1,0 +1,47 @@
+# Prometheus alert rules (CLAUDE.md §13, Gate 11 runbook).
+# Only metrics the app exports are used (assistant/obs.py, GET /metrics).
+# Runbook rows with no exported metric are listed at the bottom and are NOT alerted here.
+groups:
+  - name: unreliable-assistant-latency
+    rules:
+      # Blueprint row: p95 > 550 ms for 30 s  -> latency breach (runbook).
+      - alert: LatencyBreach
+        expr: histogram_quantile(0.95, sum by (le) (rate(ua_request_seconds_bucket[30s]))) > 0.55
+        for: 30s
+        labels: {severity: page}
+        annotations:
+          summary: "p95 end-to-end latency above 550 ms"
+          runbook: "Enable aggressive semantic cache (cosine >= 0.92); drop BM25 and dense top_k from 50 to 25."
+      # C8 (proposed, DD): warning at p95 > 400 ms for 60 s, page at > 450 ms for 60 s.
+      - alert: LatencyWarn
+        expr: histogram_quantile(0.95, sum by (le) (rate(ua_request_seconds_bucket[1m]))) > 0.40
+        for: 60s
+        labels: {severity: warning}
+        annotations: {summary: "p95 latency above 400 ms (C8 proposed)"}
+      - alert: LatencyPageSLA
+        expr: histogram_quantile(0.95, sum by (le) (rate(ua_request_seconds_bucket[1m]))) > 0.45
+        for: 60s
+        labels: {severity: page}
+        annotations: {summary: "p95 latency above the 450 ms SLA (C8 proposed)"}
+
+  - name: unreliable-assistant-capacity
+    rules:
+      # Gate 9 bulkheads: any refused call means a pool is full.
+      - alert: BulkheadSaturated
+        expr: sum by (pool) (increase(ua_bulkhead_rejected_total[5m])) > 0
+        labels: {severity: warning}
+        annotations: {summary: "bulkhead {{ $labels.pool }} refusing calls"}
+
+  - name: unreliable-assistant-quality
+    rules:
+      # Verification removed unsupported sentences (Gate 7 proxy for KPI-24).
+      - alert: UnsupportedClaimsRising
+        expr: sum(rate(ua_unsupported_claims_total[15m])) > 0
+        for: 15m
+        labels: {severity: info}
+        annotations: {summary: "answers contain sentences the cited chunks do not support"}
+
+# Runbook rows NOT covered (no metric exported yet):
+#   - Hallucination surge (RAGAS faithfulness < 0.90, 5 min): scores live in the ragas_scores table, not Prometheus.
+#   - MCP server hang (JSON-RPC timeout > 150 ms, > 1%): the bridge does not export a metric.
+#   - Cache stampede / leak (Redis CPU > 85%): no Redis exporter.
